@@ -112,7 +112,7 @@ void draw()
 
 void connect(int i, int j, Matrix transform)
 {
-  strokeWeight(2);
+  strokeWeight(1.2f);
   Matrix a = transform.multiply(points[i]), b = transform.multiply(points[j]);
   
   if (ORTHO)
