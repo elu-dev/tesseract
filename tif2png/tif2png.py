@@ -12,7 +12,7 @@ for file in os.listdir(f'{path}/frames'):
 
     _,alpha = cv2.threshold(tmp, 0, 255, cv2.THRESH_BINARY)
     b, g, r = cv2.split(src)
-    rgba = [b,g,r, alpha]
+    rgba = [alpha]*4
     clean = cv2.merge(rgba,4)
 
     if type(finalimg) == type(4): finalimg = clean
@@ -20,7 +20,6 @@ for file in os.listdir(f'{path}/frames'):
     copy = clean
     # cv2.imshow('a', finalimg)
     # cv2.waitKey()
-finalimg = np.concatenate((finalimg, copy), axis=1)
-finalimg = np.concatenate((finalimg, copy), axis=1)
+
 cv2.imwrite(f"{path}/final.png", finalimg)
 

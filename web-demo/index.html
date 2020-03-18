@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Tesseract demo</title>
     <style>
@@ -7,36 +8,24 @@
             width: 300px;
             height: 300px;
             background: linear-gradient(225deg, #6441A5, #36075c);
+            font-family: Arial, Helvetica, sans-serif;
         }
         .tesseract {
-            width: 300px;
-            height: 300px;
-            background-image: url("../tif2png/final.png");
-            background-position: left;
-            background-size: 9200%;
-
-            animation-name: rotate-tesseract;
-            animation-duration: 1.7s;
-            animation-timing-function: steps(91);
-            animation-iteration-count: infinite;
-        }
-
-        .tesseract2 {
             display: block;
             width: 300px;
             height: 300px;
             background-image: url("../tif2png/final.png");
             background-position: left;
-            background-size: 9200%;
+            background-size: 18000%;
         }
 
         .tesseract-animate {
             animation-name: rotate-tesseract;
-            animation-duration: 1.3s;
-            animation-timing-function: steps(91);
+            animation-duration: 3s;
+            animation-timing-function: steps(179);
         }
 
-        .tesseract2:hover {
+        .tesseract:hover {
             cursor: pointer;
         }
 
@@ -50,13 +39,16 @@
         }
     </style>
 </head>
+
 <body>
-    <!-- <div class="bg">
-        <div class="tesseract"></div>
-    </div> -->
     <div class="bg">
-        <a class="tesseract2" onclick="anim(this)"></a>
+        <div class="tesseract tesseract-animate" style="animation-iteration-count:infinite"></div>
     </div>
+    <div class="bg">
+        <div class="tesseract" onclick="anim(this)"></div>
+        <p>Click ^</p>
+    </div>
+    
     <script>
         function anim(elem) {
             elem.classList.add('tesseract-animate')
