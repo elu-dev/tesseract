@@ -105,13 +105,14 @@ void draw()
   // showDegrees();
   processDegrees();
   
-  if (frame < 90) saveFrame("../tif2pngframes/frame_###");
+  if (frame < 180) saveFrame("../tif2png/frames/frame_###");
   frame++;
 }
 
 
 void connect(int i, int j, Matrix transform)
 {
+  strokeWeight(2);
   Matrix a = transform.multiply(points[i]), b = transform.multiply(points[j]);
   
   if (ORTHO)
