@@ -30,7 +30,7 @@ PFont F;
 
 void setup()
 {
-  size(300,400);
+  size(300,300);
   frameRate(30);
   F = createFont("Consolas",18,true);
 }
@@ -102,10 +102,10 @@ void draw()
   }
   
   translate(-width/2, -height/2);
-  showDegrees();
+  // showDegrees();
   processDegrees();
   
-  //if (frame < 360) saveFrame("frames/frame_###");
+  if (frame < 90) saveFrame("../tif2pngframes/frame_###");
   frame++;
 }
 

@@ -1,11 +1,11 @@
 
-float XY = 0, XW = 0,
-      YZ = 0, YW = 0,
-      XZ = 0, ZW = 0;
+float XY = 0, XW =45,
+      YZ =45, YW = 0,
+      XZ = 0, ZW =45;
 
-boolean bXY = false, bXW = false,
-        bYZ = false, bYW = false,
-        bXZ = false, bZW = false;
+boolean bXY = false, bXW =  true,
+        bYZ =  true, bYW = false,
+        bXZ = false, bZW =  true;
 
 int dy = 0;
 
